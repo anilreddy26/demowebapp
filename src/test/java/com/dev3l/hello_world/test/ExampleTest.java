@@ -8,4 +8,11 @@ public class ExampleTest {
 	public void exampleTest() {
 		Assert.assertTrue(true);
 	}
+	try (InputStream is = new URL(url).openStream();
+       BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
+      while ((line = br.readLine()) != null) {
+          result.append(line);
+      }
+  }
+
 }
